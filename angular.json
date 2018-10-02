@@ -3,17 +3,17 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "AngularProject": {
+    "my-proyect": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
-      "prefix": "app",
+      "prefix": "myprefix",
       "schematics": {},
       "targets": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/AngularProject",
+            "outputPath": "dist/my-proyect",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -50,18 +50,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "AngularProject:build"
+            "browserTarget": "my-proyect:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "AngularProject:build:production"
+              "browserTarget": "my-proyect:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "AngularProject:build"
+            "browserTarget": "my-proyect:build"
           }
         },
         "test": {
@@ -95,7 +95,7 @@
         }
       }
     },
-    "AngularProject-e2e": {
+    "my-proyect-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "targets": {
@@ -103,11 +103,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "AngularProject:serve"
+            "devServerTarget": "my-proyect:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "AngularProject:serve:production"
+              "devServerTarget": "my-proyect:serve:production"
             }
           }
         },
@@ -123,5 +123,5 @@
       }
     }
   },
-  "defaultProject": "AngularProject"
+  "defaultProject": "my-proyect"
 }
